@@ -12,7 +12,6 @@ module "dns" {
 
 module "edge" {
   source        = "../../modules/edge"
-  root_domain   = var.root_domain
   origin_domain = module.app_us.alb_dns_name
   acm_cert_arn  = var.acm_cert_arn
   log_bucket    = var.log_bucket
